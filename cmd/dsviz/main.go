@@ -1,1 +1,15 @@
 package main
+
+import (
+	"log"
+
+	"github.com/gin-gonic/gin"
+)
+
+func main() {
+	server := gin.Default()
+	server.Static("/", "JavascriptVisualRelease")
+	if err := server.Run(":8899"); err != nil {
+		log.Fatal(err)
+	}
+}
