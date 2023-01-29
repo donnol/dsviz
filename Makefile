@@ -1,4 +1,4 @@
 .PHONY:
 
 run:
-	go run .\cmd\dsviz\main.go
+	go run ./cmd/dsviz/main.go
