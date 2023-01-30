@@ -4,15 +4,20 @@
         text-align: center;
     }
 
+    .descContent {
+        padding: 10px;
+        margin: 10px;
+    }
+
 </style>
 <div class="descTitle">是什么？</div>
-<div>
+<div class="descContent">
     <p>&nbsp;&nbsp;&nbsp;&nbsp;
         最小堆是一棵完全二叉树，非叶子结点的值不大于左孩子和右孩子的值。
     </p>
 </div>
 <div class="descTitle">如何表示？</div>
-<div>
+<div class="descContent">
     <p>&nbsp;&nbsp;&nbsp;&nbsp;
         <!-- from https://webdemo.myscript.com/views/math/index.html# -->
         <!-- <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -31,13 +36,13 @@
     </p>
 </div>
 <div class="descTitle">如何构建？</div>
-<div>
+<div class="descContent">
     <p>&nbsp;&nbsp;&nbsp;&nbsp;
         从<b>末尾节点的父节点的这棵子树</b>开始调整，根据小根堆的性质，越小的数据往上移动，注意，被调整的节点还有子节点的情况，需要递归进行调整。
     </p>
 </div>
 <div class="descTitle">如何新增？</div>
-<div>
+<div class="descContent">
     <p>&nbsp;&nbsp;&nbsp;&nbsp;
         插入一个元素：新元素被加入到heap的末尾，然后更新树以恢复堆的次序。
     </p>
@@ -47,13 +52,13 @@
     </p>
 </div>
 <div class="descTitle">如何删除？</div>
-<div>
+<div class="descContent">
     <p>&nbsp;&nbsp;&nbsp;&nbsp;
         按定义，堆中每次都删除第0个数据。为了便于重建堆，实际的操作是将最后一个数据的值赋给根结点，堆的元素个数-1，然后再从根结点开始进行一次从上向下的调整。调整时先在左右儿子结点中找最小的，如果父结点比这个最小的子结点还小说明不需要调整了，反之将父结点和它交换后再考虑后面的结点。相当于从根结点将一个数据的“下沉”过程。
     </p>
 </div>
 <div class="descTitle">性能如何？</div>
-<div>
+<div class="descContent">
     <p>&nbsp;&nbsp;&nbsp;&nbsp;
         搜索性能：二叉排序树是为了实现动态查找而涉及的数据结构，它是面向查找操作的，在二叉排序树中查找一个节点的平均时间复杂度是O(logn)；在堆中搜索并不是第一优先级，堆是为了实现排序而实现的一种数据结构，它不是面向查找操作的，因为在堆中查找一个节点需要进行遍历，其平均时间复杂度是O(n)。
     </p>
