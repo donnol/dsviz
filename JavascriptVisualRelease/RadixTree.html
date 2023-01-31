@@ -31,10 +31,13 @@
 		<script type = "application/javascript" src = "AnimationLibrary/AnimationMain.js"> </script>
 		<script type = "application/javascript" src = "AlgorithmLibrary/Algorithm.js"> </script>
 		<script type = "application/javascript" src = "AlgorithmLibrary/RadixTree.js"> </script> 
+
+		<script src="ThirdParty/marked.min.js"></script>
+		<script type="text/javascript" src="util/footer.js"> </script>
 				
 	 </head> 
 	
-	<body onload="init();" class="VisualizationMainPage">
+	<body onload="init();includeMD()" class="VisualizationMainPage">
 		
 		<div id = "container">
 			
@@ -55,7 +58,7 @@
 				<canvas id="canvas" width="1000" height="500"></canvas>
 				<div id = "generalAnimationControlSection">
 					<!-- Table for buttons to control general animation (play/pause/undo/etc) ->
-					<!-- (filled in by javascript code, specifically AnimationMain.js)  -->
+					(filled in by javascript code, specifically AnimationMain.js)  -->
 
 					<table id="GeneralAnimationControls">  </table>		
 				</div>
@@ -65,6 +68,7 @@
 			<div id="footer">  
 				<p><a href="Algorithms.html">Algorithm Visualizations</a></p>
 			</div>
+			<div include-description-md="description/RadixTree.md"></div>
 
 		</div><!-- container -->
 	</body>
