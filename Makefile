@@ -1,4 +1,7 @@
 .PHONY:
 
-run:
-	go run ./cmd/dsviz/main.go
+build:
+	go build -o dsviz ./cmd/dsviz
+
+run:build
+	./dsviz
