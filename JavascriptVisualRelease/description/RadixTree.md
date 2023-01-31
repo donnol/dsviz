@@ -6,6 +6,18 @@
 
 ## 如何表示？
 
+```go
+type RadixTree struct {
+    root *RadixNode
+}
+type RadixNode struct {
+    Childs map[rune]*RadixNode
+}
+func (rt *RadixTree) Print() {
+
+}
+```
+
 ## 如何构建？
 
 ## 如何新增？

@@ -44,6 +44,20 @@ function includeMD() {
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4) {
                     if (this.status == 200) {
+                        marked.setOptions({
+                            highlight: function (code, lang, callback) {
+                                highlighted = true;
+                                return hljs.highlightAuto(code).value;
+                            },
+                            gfm: true,
+                            tables: true,
+                            pedantic: false,
+                            sanitize: false,
+                            silent: false,
+                            smartLists: true,
+                            smartypants: false,
+                            // langPrefix: 'language-',
+                        });
                         elmnt.innerHTML = marked.parse(this.responseText);
                     }
                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
