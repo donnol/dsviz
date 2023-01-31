@@ -1,0 +1,74 @@
+<style>
+    .descTitle {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .descContent {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .descReference {
+        text-align: left;
+        padding: 10px;
+        margin: 10px;
+    }
+
+</style>
+<div class="descTitle">是什么？</div>
+<div class="descContent">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;
+        前缀树
+    </p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;
+        当有某个节点的值不存在时，使用空心节点表示（与Radix tree不同，它会将两个字符放在一个节点）
+        比如：输入de字符串，此时在Trie里会出现d和e两个节点，其中的d节点是空心节点；而在Radix则会使用一个节点存储de字符串。如果后续再输入d字符串，则Trie会将d实心化，Radix则会将de节点拆分为d和e两个节点。
+    </p>
+</div>
+<div class="descTitle">如何表示？</div>
+<div class="descContent">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;
+        <code>
+        type Trie struct {
+            Root *TrieNode
+        }
+        type TrieNode struct {
+            Childs map[rune]*TrieNode
+            Exist bool // 是否真实存在
+            Data string
+            IsLeaf bool
+        }
+        </code>
+    </p>
+</div>
+<div class="descTitle">如何构建？</div>
+<div class="descContent">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+</div>
+<div class="descTitle">如何新增？</div>
+<div class="descContent">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+</div>
+<div class="descTitle">如何删除？</div>
+<div class="descContent">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+</div>
+<div class="descTitle">性能如何？</div>
+<div class="descContent">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+</div>
+<div class="descReference">
+    <p><b>参考</b></p>
+    <ul>
+        <li>
+        </li>
+    </ul>
+</div>
