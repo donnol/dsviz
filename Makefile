@@ -5,3 +5,8 @@ build:
 
 run:build
 	./dsviz
+
+stop:
+	pkill dsviz || true
+
+restart:stop run
